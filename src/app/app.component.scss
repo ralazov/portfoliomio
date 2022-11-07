@@ -21,5 +21,18 @@ margin-top: 3pc;
 .sombrita{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.navbar{
+  background-color: transparent;
+}
 
+.fondo{
+  // background-size: cover;
+  // background:
+  // background-repeat: no-repeat;
+  width: 100%;
+  // background-image:url("../assets/fondo.jpg");
+  background-repeat: no-repeat;
+    background: url("../assets/fondo.jpg") no-repeat center center;
+    background-size: 100% 100%;
+}
 
