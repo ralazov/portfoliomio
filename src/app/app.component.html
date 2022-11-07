@@ -1,0 +1,123 @@
+
+ <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button  mat-raised-button color="primary">Acerca de mi</button>
+        </li>
+
+        <li class="nav-item">
+          <button  mat-raised-button color="primary">Primary</button>
+        </li>
+
+        <li class="nav-item">
+          <button  mat-raised-button color="primary">Primary</button>
+        </li>
+
+        <li class="nav-item">
+          <button  mat-raised-button color="primary">Primary</button>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+ </nav>
+
+ <div class="container-fluid">
+    <div class= "row" >
+       <div class="col-md-12 text-center">
+          <img class="MiImagen" src="../assets/profile foto perfil.jpg">
+
+        </div>
+    </div>
+
+
+    <div class="row">
+       <div class="col-md-12 text-center">
+
+
+        <div class="nombre fs-2 fw-bold">
+              Raúl Lazo
+
+        </div>
+
+
+
+
+
+     </div>
+    </div>
+
+ <div class="mover-contenido">
+    <mat-card class="sombrita">
+     <div class="row">
+       <div class="col-md-6 text-center">
+         columa de prueba 1
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+       </div>
+
+       <div class="col-md-6 text-center">
+         columna de prueba 2
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+       </div>
+      </div>
+    </mat-card>
+ </div>
+
+
+ </div>
+
+
+
+
+
+
+
+ <form class="register-form" (ngSubmit)="crearFormulario($event)" style="margin-left:35%; margin-top:5%;">
+   <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input  matInput placeholder="Nombre" ngModel name="nombre">
+   </mat-form-field>
+
+   <div></div>
+
+   <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" ngModel name="email">
+   </mat-form-field>
+   <div></div>
+
+   <mat-form-field appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input   type="password" matInput placeholder="Contraseña" ngModel name="contraseña">
+   </mat-form-field>
+   <div></div>
+
+   <button mat-stroked-button color="accent" class="button btn-block"  >
+    <div style="text-align: center">
+        Crear
+    </div>
+   </button>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
