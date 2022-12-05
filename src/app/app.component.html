@@ -1,7 +1,7 @@
 <div class="fondo">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" >Raúl Lazo</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,10 +16,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" (click)="facebook()"href="#">Facebook</a>
           </li>
-          <li class="Experiencia">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)="instagram()"href="#">Instagram</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)="GitHub()"href="#">GitHub</a>
           </li>
         </ul>
       </div>
@@ -48,7 +51,7 @@
         Creatividad y experiencia, entendiendo que la capacidad de generar
         cosas, es un camino que soluciona los problemas de la vida de las
         personas, brindo soluciones creativas, rápidas y ágiles para que tu
-        negocio o empresa encuentre la solucion ideal para la necesidad justa.
+        negocio o empresa encuentre la solución ideal para la necesidad justa.
         Creyendo siempre en el trabajo en equipo, aportando y generando
         soluciones grupales, le aporto un valor significativo a tu empresa
         aplicando metologías ágiles para una mejor interacción entre todos los
@@ -91,7 +94,7 @@
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Angular</div>
+          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Angular</div>
         </div>
       </div>
     </div>
@@ -103,13 +106,13 @@
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Node</div>
+          <div class="progress-bar" role="progressbar" style="width: 22%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Node</div>
         </div>
       </div>
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CSS</div>
+          <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CSS</div>
         </div>
       </div>
     </div>
@@ -121,13 +124,13 @@
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Html</div>
+          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Html</div>
         </div>
       </div>
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Javascript</div>
+          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Javascript</div>
         </div>
       </div>
     </div>
@@ -139,89 +142,77 @@
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">SQL</div>
+          <div class="progress-bar" role="progressbar" style="width: 23%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">SQL</div>
         </div>
       </div>
 
       <div class="col-md-6 text-center">
         <div class="progress" style="height: 20px;">
-          <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Metodologias agiles</div>
+          <div class="progress-bar" role="progressbar" style="width:27%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Typescript</div>
         </div>
       </div>
     </div>
 
   </mat-card>
 
+  <mat-card class="sombrita">
+    <div class="row">
+
+      <div class="col-md-6 text-center">
+        <div class="progress" style="height: 20px;">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Ganas de supearme</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <div class="progress" style="height: 20px;">
+          <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Metodologias agiles</div>
+        </div>
+      </div>
+    </div>
+
+  </mat-card>
 
 </div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center">
+
+      <form class="register-form"
+      [formGroup]="contactForm"
+      (ngSubmit)="crearFormulario($event)"
+
+    >
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="name"placeholder="Nombre" formControlName="nombre" />
+      </mat-form-field>
+
+      <div></div>
+
+      <div></div>
+        <mat-form-field appearance="fill" >
+          <mat-label>Mensaje</mat-label>
+          <input matInput type="mensaje" formControlName="mensaje">
+        </mat-form-field>
+        <div *ngIf="formControl.mensaje.errors" class="text-danger">
+          <div *ngIf="formControl.mensaje.errors.required">Se necesita un mensaje </div>
+          </div>
+      <div></div>
+
+      <button mat-stroked-button color="accent" class="button btn-block">
+        <div style="text-align: center">Crear</div>
+      </button>
+    </form>
 
 
 
+    </div>
 
+  </div>
 
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<form
-  class="register-form"
-  (ngSubmit)="crearFormulario($event)"
-  style="margin-left: 35%; margin-top: 5%"
->
-  <mat-form-field appearance="fill">
-    <mat-label>Nombre</mat-label>
-    <input matInput placeholder="Nombre" ngModel name="nombre" />
-  </mat-form-field>
-
-  <div></div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput placeholder="Email" ngModel name="email" />
-  </mat-form-field>
-  <div></div>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Contraseña</mat-label>
-    <input
-      type="password"
-      matInput
-      placeholder="Contraseña"
-      ngModel
-      name="contraseña"
-    />
-  </mat-form-field>
-  <div></div>
-
-  <button mat-stroked-button color="accent" class="button btn-block">
-    <div style="text-align: center">Crear</div>
-  </button>
-</form>
 
 <router-outlet></router-outlet>
